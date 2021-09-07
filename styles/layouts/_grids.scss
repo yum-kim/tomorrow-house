@@ -1,0 +1,61 @@
+/* 
+- columns : 그리드 기둥 수
+- unit: gutter를 제외한 그리드 기둥 너비
+- gutter: 간격이 몇인가
+*/
+
+/* 
+* MOBILE (<768px) --------------------------
+* fixture - sm (frefix. fixture라고 하는게 어떤건지 알 수 있음)
+* # of columns - 4
+* gutter - 20px
+* margin - 5px
+* container-size - 100% - (5px * 2)
+*/
+
+/* 
+* TABLET (>=768px) --------------------------
+* fixture - md
+* # of columns - 12
+* gutter - 20px
+* margin - 30px
+* container-size - 100% - (30px * 2)
+* max-container-size - 960px
+*/
+
+/* 
+* desktop (>=1200px) --------------------------
+* fixture - lg
+* # of columns - 12
+* gutter - 20px
+* unit - 75px
+* margin - auto
+* container-size - 1140px
+* max-container-size - 1140px
+*/
+
+$gutter: 20px;
+$sm-columns: 4;
+$sm-margin: 5px;
+
+.container {
+  width: 100%;
+  padding: 0 $sm-margin;
+  margin: 0 auto;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  //'col-' 로 시작하는 모든 클래스를 선택
+  [class^="col-"] {
+    padding: 0 $gutter / 2;
+  }
+
+  @for $i from 1 through $sm-columns {
+    .col-sm-#{$i} {
+      width: percentage($i / $sm-columns);
+    }
+  }
+}
