@@ -361,28 +361,28 @@ p {
 */
 /* 
 * MOBILE (<768px) --------------------------
-* fixture - sm (frefix. fixture라고 하는게 어떤건지 알 수 있음)
-* # of columns - 4
+* fixture - sm (samll) (frefix. fixture라고 하는게 어떤건지 알 수 있음)
+* => 별명만 보면 모바일 혹은 데스크탑을 위한건지 바로 알 수 있게 영어로 fixture로 표현. 
+* => sm이 붙은건 모바일이라고 바로 인지할 수 있음!
+* # of columns - 4개
 * gutter - 20px
 * margin - 5px
 * container-size - 100% - (5px * 2)
-*/
-/* 
+* 
 * TABLET (>=768px) --------------------------
-* fixture - md
-* # of columns - 12
+* fixture - md (medium)
+* # of columns - 12개
 * gutter - 20px
 * margin - 30px
 * container-size - 100% - (30px * 2)
 * max-container-size - 960px
-*/
-/* 
-* desktop (>=1200px) --------------------------
-* fixture - lg
+* 
+* DESKTOP (>=1200px) --------------------------
+* fixture - lg (large)
 * # of columns - 12
 * gutter - 20px
 * unit - 75px
-* margin - auto
+* margin - auto (viewport width 에서 container 뺀 양 옆 마진)
 * container-size - 1140px
 * max-container-size - 1140px
 */
@@ -403,5 +403,61 @@ p {
     width: 75%; }
   .container .col-sm-4 {
     width: 100%; }
+  @media screen and (min-width: 768px) {
+    .container {
+      max-width: 1020px;
+      padding: 0 30px; }
+      .container .col-md-1 {
+        width: 8.33333%; }
+      .container .col-md-2 {
+        width: 16.66667%; }
+      .container .col-md-3 {
+        width: 25%; }
+      .container .col-md-4 {
+        width: 33.33333%; }
+      .container .col-md-5 {
+        width: 41.66667%; }
+      .container .col-md-6 {
+        width: 50%; }
+      .container .col-md-7 {
+        width: 58.33333%; }
+      .container .col-md-8 {
+        width: 66.66667%; }
+      .container .col-md-9 {
+        width: 75%; }
+      .container .col-md-10 {
+        width: 83.33333%; }
+      .container .col-md-11 {
+        width: 91.66667%; }
+      .container .col-md-12 {
+        width: 100%; } }
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+      padding: 0; }
+      .container .col-lg-1 {
+        width: 95px; }
+      .container .col-lg-2 {
+        width: 190px; }
+      .container .col-lg-3 {
+        width: 285px; }
+      .container .col-lg-4 {
+        width: 380px; }
+      .container .col-lg-5 {
+        width: 475px; }
+      .container .col-lg-6 {
+        width: 570px; }
+      .container .col-lg-7 {
+        width: 665px; }
+      .container .col-lg-8 {
+        width: 760px; }
+      .container .col-lg-9 {
+        width: 855px; }
+      .container .col-lg-10 {
+        width: 950px; }
+      .container .col-lg-11 {
+        width: 1045px; }
+      .container .col-lg-12 {
+        width: 1140px; } }
 
 /*# sourceMappingURL=style.css.map */
