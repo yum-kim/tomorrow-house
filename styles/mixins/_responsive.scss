@@ -1,0 +1,28 @@
+@mixin responsive($screen) {
+  @if ($screen == "T") {
+    @media screen and (min-width: $md-breakpoint) {
+      @content;
+    }
+  }
+
+  @if ($screen == "D") {
+    @media screen and (min-width: $lg-breakpoint) {
+      @content;
+    }
+  }
+}
+
+/*
+* 이런 식으로 작성하면 "media screen and ~ " 부분 싹 다 대체 가능!
+*/
+.section {
+  //tablet 사이즈 이후 부터는 이렇게 적용하겠다!
+  @include responsive(T) {
+    color: red;
+  }
+
+  @include responsive(D) {
+    //desktop
+    color: blue;
+  }
+}
