@@ -2,6 +2,7 @@
 @import "./constants/typography";
 @import "./constants/breakpoints";
 
+@import "./base/fonts";
 @import "./base/nomalize";
 @import "./base/reset";
 
@@ -12,5 +13,6 @@
 
 @import "./modules/tags";
 @import "./modules/avatars";
+@import "./modules/star-ratings";
 
 @import "./layouts/grids";
