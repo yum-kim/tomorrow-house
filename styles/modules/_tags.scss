@@ -1,0 +1,33 @@
+%tag-base {
+  // 공통 스타일
+
+  /*
+  mixin은 인자를 받을 수 있지만, placeholder는 () 못만듬. 확장성 떨어짐.
+  mixin은 한번 선언하면 여기저기서 ㄷ쓸 수 있지만 placeholder는 연관된 애들끼리 공통 스타일을 가지고 있을 때 선언해두고 상속받는 식으로 작업함
+    */
+
+  @include inline-flexbox;
+  @include text-style(12);
+  height: 20px;
+  padding: 0 6px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.tag-red {
+  @extend %tag-base;
+  color: $white;
+  background-color: $red;
+}
+
+.tag-green {
+  @extend %tag-base;
+  color: $white;
+  background-color: $green;
+}
+
+.tag-gray {
+  @extend %tag-base;
+  color: $secondary;
+  background-color: $border;
+}

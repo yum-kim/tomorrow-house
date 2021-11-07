@@ -354,6 +354,56 @@ p {
   letter-spacing: -0.005em;
   color: #8c8d96; }
 
+/*
+* 이런 식으로 작성하면 "media screen and ~ " 부분 싹 다 대체 가능!
+*/
+@media screen and (min-width: 768px) {
+  .section {
+    color: red; } }
+
+@media screen and (min-width: 1200px) {
+  .section {
+    color: blue; } }
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start; }
+
+.tag-red, .tag-green, .tag-gray {
+  /*
+  mixin은 인자를 받을 수 있지만, placeholder는 () 못만듬. 확장성 떨어짐.
+  mixin은 한번 선언하면 여기저기서 ㄷ쓸 수 있지만 placeholder는 연관된 애들끼리 공통 스타일을 가지고 있을 때 선언해두고 상속받는 식으로 작업함
+    */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.005em;
+  height: 20px;
+  padding: 0 6px;
+  font-weight: 700;
+  border-radius: 4px; }
+
+.tag-red {
+  color: #fff;
+  background-color: #f86d7d; }
+
+.tag-green {
+  color: #fff;
+  background-color: #22c58b; }
+
+.tag-gray {
+  color: #8c8d96;
+  background-color: #e0e2e7; }
+
 /* 
 - columns : 그리드 기둥 수
 - unit: gutter를 제외한 그리드 기둥 너비
