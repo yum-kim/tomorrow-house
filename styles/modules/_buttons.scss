@@ -15,8 +15,8 @@
   @extend %btn-base;
   color: $white;
   background-color: $blue;
-  border: none;
   transition: background-color 200ms ease-in-out;
+  border: none;
 
   &:not(:disabled):hover {
     background-color: $blue-dark;
@@ -27,8 +27,8 @@
   @extend %btn-base;
   color: $primary;
   background-color: $border;
-  border: none;
   transition: background-color 200ms ease-in-out;
+  border: none;
 
   &:not(:disabled):hover {
     background-color: $tertiary;
